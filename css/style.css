@@ -147,6 +147,42 @@ body {
   position: absolute;
   top: -60px;
 }
-.images {
+.video {
   margin-bottom: 100px;
+}
+.advantages-inner__row {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.advantages__title {
+  line-height: 42px;
+  color: #b70021;
+  font-size: 36px;
+  position: absolute;
+  top: 0;
+}
+.advantages__text {
+  width: 303px;
+}
+.advantages__text ul {
+  list-style: none;
+}
+.advantages-descr {
+  max-width: 570px;
+  width: 100%;
+}
+.advantages__title--bottom {
+  right: 0;
+  bottom: 0;
+  top: auto;
+}
+.desighn-row {
+  display: flex;
+  align-items: center;
+}
+.desighn-row__item {
+  width: 450px;
 }
