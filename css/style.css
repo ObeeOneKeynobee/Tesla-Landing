@@ -69,7 +69,7 @@ body {
   width: 284px;
   margin-bottom: 25px;
 }
-.header-content__btn {
+.page-btn {
   display: inline-block;
   width: 290px;
   height: 90px;
@@ -78,8 +78,70 @@ body {
   background: rgba(255, 255, 255, 0.1);
   transition: all 0.5s;
 }
-.header-content__btn:hover {
+.page-btn:hover {
   background: #770302;
+}
+.menu {
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 7;
+}
+.menu.active {
+  left: 0;
+}
+
+.container-menu {
+  position: relative;
+}
+.close-btn {
+  height: 50px;
+  width: 50px;
+
+  position: absolute;
+  right: 15px;
+  top: 31px;
+  cursor: pointer;
+}
+.close-btn::after,
+.close-btn::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  transform-origin: left;
+}
+.close-btn::after {
+  transform: rotate(45deg);
+}
+.close-btn::before {
+  transform: rotate(-45deg);
+  bottom: -1px;
+}
+.menu__list {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.menu__list a {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 56px;
+  padding: 30px 25px 14px 0;
+  border-bottom: 3px solid #770302;
+  display: inline-block;
+  min-width: 368px;
+  transition: all 0.5s;
+}
+.menu__list a:hover {
+  border-color: #fff;
+  color: #b70021;
+  transform: scale(1.2);
+  margin-left: 37px;
 }
 .slider-item {
   height: 100vh;
@@ -179,10 +241,49 @@ body {
   bottom: 0;
   top: auto;
 }
+
+.desighn__images {
+  margin-bottom: 100px;
+}
 .desighn-row {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
 }
 .desighn-row__item {
-  width: 450px;
+  max-width: 570px;
+  width: 100%;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.desighn-row__item-num {
+  color: #b70021;
+}
+.desighn-row__item-text {
+  max-width: 430px;
+  padding-top: 25px;
+}
+.footer {
+  background-color: #690102;
+  padding: 83px 0 20px;
+}
+.footer-btn {
+  text-align: center;
+  margin-bottom: 83px;
+}
+
+.footer-copy {
+  font-weight: 700;
+  text-align: center;
+}
+.footer-copy li {
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+}
+.footer-copy li + li::before {
+  content: "|";
+  position: absolute;
+  left: -5px;
 }
